@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio de Amigo Secreto</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Amigo Secreto</h1>
+
+        <div class="area-adicionar">
+            <label for="nome-amigo">Insira o nome do amigo:</label>
+            <input type="text" id="nome-amigo" placeholder="Ex: João">
+            <button id="botao-adicionar">Adicionar</button>
+        </div>
+
+        <div class="area-lista">
+            <h2>Amigos na Lista:</h2>
+            <div id="lista-amigos">
+                </div>
+        </div>
+
+        <div class="area-sorteio">
+            <div class="botoes-acao">
+                <button id="botao-sortear">Sortear Próximo</button>
+                <button id="botao-reiniciar">Reiniciar Sorteio</button>
+            </div>
+            <h2>O Amigo Secreto sorteado é:</h2>
+            
+            <div class="resultado-container">
+                <p id="resultado-sorteio">?</p>
+                <button id="botao-revelar">Revelar</button>
+            </div>
+            
+            <p id="mensagem-final"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/* estilo.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 25px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #555;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.area-adicionar {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#botao-sortear {
+    background-color: #28a745;
+    margin-top: 10px;
+}
+
+#botao-sortear:hover {
+    background-color: #218838;
+}
+
+#lista-amigos {
+    margin-top: 15px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#lista-amigos p {
+    background-color: #f9f9f9;
+    padding: 8px;
+    border-radius: 4px;
+    border-left: 4px solid #007bff;
+    margin-bottom: 5px;
+}
+
+#resultado-sorteio {
+    font-size: 24px;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 10px;
+    min-height: 30px;
+}
+/* ... (todo o CSS anterior continua igual) ... */
+
+/* Adicione ou modifique as seguintes regras */
+
+.resultado-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#resultado-sorteio {
+    font-size: 24px;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 0; /* Ajuste de margem */
+    min-height: 30px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* NOVO: Classe para esconder o resultado */
+#resultado-sorteio.escondido {
+    color: #333; /* Cor do texto igual ao fundo para esconder */
+    background-color: #333;
+    user-select: none; /* Impede que o usuário selecione o texto escondido */
+}
+
+/* NOVO: Estilo para o botão de revelar */
+#botao-revelar {
+    background-color: #17a2b8; /* Azul-petróleo */
+    font-size: 14px;
+    padding: 8px 15px;
+    display: none; /* Começa escondido */
+}
+
+#botao-revelar:hover {
+    background-color: #138496;
+}
+/* ... (todo o CSS anterior continua igual) ... */
+
+/* Adicione esta nova regra no final do arquivo */
+
+/* NOVO: Estilo para a mensagem de finalização */
+#mensagem-final {
+    display: none; /* Começa escondida */
+    margin-top: 20px;
+    font-weight: bold;
+    color: #007bff; /* Azul para destaque */
+    font-size: 16px;
+    padding: 10px;
+    background-color: #e7f3ff;
+    border-radius: 5px;
+    border: 1px solid #b3d7ff;
+}
