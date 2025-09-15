@@ -96,9 +96,6 @@ button:hover {
     margin-top: 10px;
     min-height: 30px;
 }
-/* ... (todo o CSS anterior continua igual) ... */
-
-/* Adicione ou modifique as seguintes regras */
 
 .resultado-container {
     margin-top: 10px;
@@ -119,14 +116,14 @@ button:hover {
     transition: all 0.3s ease; /* Transição suave */
 }
 
-/* NOVO: Classe para esconder o resultado */
+/* Classe para esconder o resultado */
 #resultado-sorteio.escondido {
     color: #333; /* Cor do texto igual ao fundo para esconder */
     background-color: #333;
     user-select: none; /* Impede que o usuário selecione o texto escondido */
 }
 
-/* NOVO: Estilo para o botão de revelar */
+/* Estilo para o botão de revelar */
 #botao-revelar {
     background-color: #17a2b8; /* Azul-petróleo */
     font-size: 14px;
@@ -137,11 +134,9 @@ button:hover {
 #botao-revelar:hover {
     background-color: #138496;
 }
-/* ... (todo o CSS anterior continua igual) ... */
 
-/* Adicione esta nova regra no final do arquivo */
 
-/* NOVO: Estilo para a mensagem de finalização */
+/*  Estilo para a mensagem de finalização */
 #mensagem-final {
     display: none; /* Começa escondida */
     margin-top: 20px;
@@ -152,4 +147,5 @@ button:hover {
     background-color: #e7f3ff;
     border-radius: 5px;
     border: 1px solid #b3d7ff;
+
 }
