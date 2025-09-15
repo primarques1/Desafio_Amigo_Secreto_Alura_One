@@ -13,9 +13,9 @@ const botaoSortear = document.getElementById('botao-sortear');
 const botaoReiniciar = document.getElementById('botao-reiniciar');
 const resultadoSorteioDisplay = document.getElementById('resultado-sorteio');
 const botaoRevelar = document.getElementById('botao-revelar');
-const mensagemFinalDisplay = document.getElementById('mensagem-final'); // NOVO: Elemento da mensagem
+const mensagemFinalDisplay = document.getElementById('mensagem-final');
 
-// ... (funções adicionarAmigo e atualizarLista continuam iguais) ...
+// ... (funções adicionarAmigo e atualizarLista ) ...
 function adicionarAmigo() {
     const nome = nomeAmigoInput.value.trim();
     if (nome === '') {
@@ -37,7 +37,7 @@ function atualizarLista() {
     }
 }
 
-// 5. Função para realizar o sorteio (LÓGICA MODIFICADA)
+// 5. Função para realizar o sorteio
 function sortearAmigo() {
     if (todosOsAmigos.length < 2) {
         alert('Adicione pelo menos dois amigos para realizar o sorteio.');
@@ -45,7 +45,7 @@ function sortearAmigo() {
     }
 
     if (amigosParaSortear.length === 0) {
-        // A mensagem na tela já informa o fim, o alert não é mais necessário.
+        // A mensagem na tela já informa o fim.
         // Apenas garantimos que o botão esteja desabilitado.
         botaoSortear.disabled = true;
         return;
@@ -62,17 +62,17 @@ function sortearAmigo() {
 
     amigosParaSortear.splice(indiceSorteado, 1);
 
-    // MODIFICADO: Verifica se o sorteio acabou AGORA
+    //  Verifica se o sorteio acabou AGORA
     if (amigosParaSortear.length === 0) {
         botaoSortear.disabled = true;
         
-        // NOVO: Exibe a mensagem de finalização
+        //Exibe a mensagem de finalização
         mensagemFinalDisplay.textContent = 'Fim do Sorteio! Todos os amigos foram sorteados.';
         mensagemFinalDisplay.style.display = 'block'; // Torna a mensagem visível
     }
 }
 
-// 6. Função para reiniciar o sorteio (LÓGICA MODIFICADA)
+// 6. Função para reiniciar o sorteio
 function reiniciarSorteio() {
     amigosParaSortear = [...todosOsAmigos];
     
@@ -83,13 +83,13 @@ function reiniciarSorteio() {
     botaoRevelar.style.display = 'none';
     ultimoAmigoSorteado = null;
     
-    // NOVO: Esconde a mensagem de finalização ao reiniciar
+    // Esconde a mensagem de finalização ao reiniciar
     mensagemFinalDisplay.style.display = 'none';
     
     console.log("Sorteio reiniciado.");
 }
 
-// ... (função revelarOuEsconder e os Event Listeners continuam iguais) ...
+// ... função revelarOuEsconder e os Event Listeners  ...
 function revelarOuEsconder() {
     if (resultadoSorteioDisplay.classList.contains('escondido')) {
         resultadoSorteioDisplay.textContent = ultimoAmigoSorteado;
@@ -112,5 +112,6 @@ nomeAmigoInput.addEventListener('keypress', function(event) {
         adicionarAmigo();
     }
 });
+
 
 reiniciarSorteio();
